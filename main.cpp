@@ -36,7 +36,7 @@ int main()
  
         computerMove(spaces, computer);
         drawBoard(spaces);
-
+        
         if(checkWinner(spaces, player, computer))
         { 
             running = false;
@@ -73,6 +73,8 @@ void playerMove(char *spaces, char player)
 {
     int number;
     do{
+        system("clear");
+        drawBoard(spaces);
         cout << "Enter a spot to place a marker (1-9): ";
         cin >> number;
         number --;
